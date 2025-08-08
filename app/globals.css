@@ -2,12 +2,10 @@
 @import "@fontsource-variable/inter/index.css";
 @import "tailwindcss";
 
-/* Tailwind UI plugins commonly required */
-@plugin "@tailwindcss/forms";
-@plugin "@tailwindcss/typography";
-@plugin "@tailwindcss/aspect-ratio";
+/* Tailwind plugins are configured in tailwind.config.js */
 
 /* Theme tokens (full/default) + project overrides */
+/* stylelint-disable-next-line at-rule-no-unknown */
 @theme {
   /* Project tokens */
   --color-background: #ffffff;

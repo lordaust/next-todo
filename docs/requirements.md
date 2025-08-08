@@ -62,73 +62,56 @@ This document outlines the functional requirements for a modern web-based todo a
 **Primary Functions:**
 
 - Display urgent tasks prominently
+- Filter tasks by type using the emoji icons (or remove selections by clicking again, no selection = all tasks)
 - Show regular tasks in organized sections
-- Quick task creation
+- Quick task creation in footer, button (+), navigates to new task page
 - Task status management (complete/incomplete)
-- Priority indicators
+- Click icon in footer to show archived tasks
+- Priority indicators (urgent/normal)
+- Search functionality field in header(auto suggest matches when typing)
+- Add function to complete a task
+- Add function to delete a task
+- Add function to edit a task (using the /new route)
+- Tasks in "new/open" state needs to ge accepted by user to get into the approved state. These needs to be listed first and handeled before other tasks and cannot be completed before accepted.
 
 **Components:**
 
-- Header with app branding
-- Urgent tasks section (highlighted)
-- Regular tasks section
-- Task items with:
-  - Checkbox for completion
-  - Task title
-  - Category indicator
-  - Due date (if applicable)
-  - Priority level
+
 
 ### 2. Task Creation Page (`/tasks/new`)
 
 **Primary Functions:**
 
 - Create new tasks
-- Select task category
-- Set priority level (urgent/normal)
-- Add due dates
-- Add descriptions
+- Select task category by selecting one emoji icon
+- Type in task name/title (required)
+- Set priority level (urgent/normal) (default normal)
+- Add due dates (optional)
+- Add descriptions  (optional)
+- Add simple subtasks (optional)
+- Save and cancel buttons both take you to the frontpage
 
 **Components:**
 
-- Task title input
-- Category selection (with emoji icons)
-- Priority toggle (urgent checkbox)
-- Due date picker
-- Description field
-- Save/Cancel buttons
-
-### 3. Search Page (`/search`)
+### 3. Search functionality/Page (`/search`)
 
 **Primary Functions:**
 
-- Search across all tasks and projects
-- Display recently viewed items
-- Show upcoming tasks
-- Filter and browse functionality
+- Search across all tasks and projects for title and description (auto suggest matches when typing)
+- clicking result takes you to the task detail page
 
 **Components:**
 
-- Search input field
-- Recently viewed section
-- Search results
-- Upcoming tasks section
-- Filter options
-
-### 4. Task History Page (`/history`)
+### 4. Task History Page (`/archive`)
 
 **Primary Functions:**
 
-- View completed tasks
+- View archived tasks (tasks which have a status to done, and closed date is older than 1 week)
+- Unarchive task functionality (in essense reopen task)
 - Task completion statistics
-- Archive management
+- Same list as active tasks, just simpler with no way of completing, filtering or deleting
 
 **Components:**
-
-- Completed tasks list
-- Completion dates
-- Task details
-- Archive/restore options
 
 ### 5. Categories Page (`/categories`)
 
@@ -139,10 +122,6 @@ This document outlines the functional requirements for a modern web-based todo a
 - Create/edit categories
 
 **Components:**
-
-- Category grid with icons
-- Task count per category
-- Category management tools
 
 ## Core Features
 
